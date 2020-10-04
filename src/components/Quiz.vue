@@ -22,12 +22,12 @@
           class="quiz-button"
           @click.prevent="initQuizStage"
           v-if="stage === 'welcome'"
-        >開始測驗</a>
+        >Start Game?</a>
         <span
           class="modal_why"
           v-if="stage === 'results'"
           @click="toggleModal"
-        >點我看解釋</span>
+        >Click me to explain</span>
         <!-- Modal -->
         <explanation-modal
           :content="quizExplanation"
@@ -61,7 +61,7 @@
           class="quiz-button"
           @click.prevent="initWelcomeStage"
           v-if="stage === 'results'"
-        >再試一次嗎？</a>
+        >Try Again？</a>
         <sharing-btn v-if="stage !== 'quiz'" />
         <ul class="quiz-questions" v-if="stage === 'quiz'">
           <li
@@ -109,7 +109,7 @@ export default {
       loading: true,
       usersAnswer: null,
       quizExplanation: null || localStorage.explanation || 'I have nothing to say.',
-      welcomeImg: require('../assets/js-logo.svg'),
+      welcomeImg: require('../assets/logothink.svg'),
       showModal: false
     };
   },
@@ -134,7 +134,7 @@ export default {
     resultsInfo() {
       if (this.correctAnswers < 10) {
         return {
-          text: "JavaScript 和 Java 的關係就如同火跟火腿 <br>而你連一條火腿都比不上",
+          text: "Oh no, you missed that question",
           img: require("../assets/kumamon.png")
         }
       }
@@ -191,7 +191,7 @@ export default {
     },
     initWelcomeStage() {
       mutations.setStage("welcome");
-      mutations.setTitle("How Well Do You Know <br>JavaScript ?");
+      mutations.setTitle("How Well Do You Know <br>Click me to explain ?");
       mutations.setImg(this.welcomeImg);
       mutations.setCurrentQuestion(0);
       mutations.resetAnswers();

@@ -6,8 +6,8 @@
         <a href="https://github.com/lydiahallie/javascript-questions" target="_blank">Lydia Hallie</a>
       </span> -->
       <h1 class="app-heading">
-        <img src="../../assets/js-logo.svg" alt="">
-        <span>Pop Quiz</span>
+        <img src="../../assets/logothink24.svg" alt="">
+        <span>Envirothink</span>
       </h1>
     </header>
     <github-corner v-if="$route.path !== '/ranking'" />

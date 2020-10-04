@@ -33,7 +33,7 @@
           v-if="routePath === '/ranking'"
           v-on:click.native="closeDropdown"
         >🕹 Play the game</div>
-        <a target="_blank" href="https://github.com/WeiChiaChang" class="dropdown-item">💻 Source Code</a>
+        <a target="_blank" href="https://github.com/tzar-umang/teamtrojan" class="dropdown-item">💻 Source Code</a>
         <div class="dropdown-divider" />
         <a href="#" class="dropdown-item" v-on:click="logOut">Sign out</a>
       </div>
